@@ -13,3 +13,9 @@ function comprobarNumero() {
       alert("No es el número :( Cantidad de intentos: " + contadorIntentos)
    }
 }
+
+for (let i=0; i==numeroVerdadero; i++)
+
+
+
+
