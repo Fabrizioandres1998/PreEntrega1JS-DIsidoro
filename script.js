@@ -16,20 +16,29 @@
 //       p.innerHTML = "Cantidad de intentos: " + contadorIntentos;
 //    }
 // }
-
-
 let numeroVerdadero = Math.floor(Math.random() * (10 - 1 + 1) + 1)
-alert(numeroVerdadero)
+function comenzar(){
+   alert(numeroVerdadero)
+}
 
-for (i = 0; i <= 5; i++) {
-   let num = parseInt(prompt("Adivina el numero"))
-   if (num == numeroVerdadero) {
-      alert("¡¡ADIVINASTE EL NÚMERO!!")
-      break;
-   } else {
-      alert("No es el número :( ")
+function comprobarNumero() {
+   for (i = 1; i <= 5; i++) {
+      let num = document.getElementById("numeroIngresado").value
+      if (num == numeroVerdadero) {
+         alert("¡¡ADIVINASTE EL NÚMERO!!")
+         break;
+      }
+      else if (i == 5) {
+         alert("GAME OVER")
+         break;
+      }
+      else {
+         alert("No es el número :( ")
+         break;
+      }
    }
 }
+
 
 
 
