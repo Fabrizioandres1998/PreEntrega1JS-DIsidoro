@@ -7,11 +7,12 @@ botonEnviar = document.getElementById("botonEnviar").disabled = true
 
 function comenzar() {
    numeroVerdadero = Math.floor(Math.random() * (10 - 1 + 1) + 1)
-   // alert(numeroVerdadero)
+   alert("¡Comienza el juego!")
    botonEnviar = document.getElementById("botonEnviar").disabled = false
+   num = document.getElementById("numeroIngresado").value = " "
    contadorIntentos = 0
    document.getElementById("parrafoIntentos").innerHTML = "Cantidad de intentos: " + contadorIntentos
-   num = document.getElementById("numeroIngresado").value = " "
+   document.getElementById("botonComenzar").textContent = "REINICIAR";
 }
 
 function comprobarNumero() {
@@ -25,6 +26,7 @@ function comprobarNumero() {
          p.innerHTML = "Cantidad de intentos: " + contadorIntentos
          break
       }
+
       else if (contadorIntentos == 4) {
          alert("GAME OVER")
          botonEnviar = document.getElementById("botonEnviar").disabled = true
@@ -33,10 +35,12 @@ function comprobarNumero() {
       }
       else if (num < numeroVerdadero) {
          alert("No es el número, el número secreto es mas alto")
+         p.innerHTML = "Cantidad de intentos: " + contadorIntentos
          break
       }
       else {
          alert("No es el número, el número secreto es mas bajo")
+         p.innerHTML = "Cantidad de intentos: " + contadorIntentos
          break
       }
    }

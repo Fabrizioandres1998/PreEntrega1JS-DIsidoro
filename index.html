@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="flex-container">
-        <h1>¡¡ADIVINA EL NUMERO SECRETO ENTRE 1 Y 10!!</h1>
+        <h1>¡¡ADIVINA EL NÚMERO SECRETO ENTRE 1 Y 10!!</h1>
         <main>
             <section class="seccion-juego">
-                <p clas="seccion-juego__p1">Presiona COMENZAR para jugar, tienes CUATRO intentos.</p>
+                <p clas="seccion-juego__p1">Presiona <strong>COMENZAR</strong> para jugar, tienes <strong>CUATRO</strong> intentos.</p>
                 <div class="seccion-juego__parrafo-boton">
                     <input type="number" id="numeroIngresado" name="numeroIngresado" min="1" max="50" class="seccion-juego__input-numero">
-                    <input type="submit" value="Enviar" id="botonEnviar" class="seccion-juego__boton seccion-juego__boton-enviar" onclick="comprobarNumero();">
+                    <input type="submit" value="ENVIAR" id="botonEnviar" class="seccion-juego__boton seccion-juego__boton-enviar" onclick="comprobarNumero();">
                 </div>
-                <input type="submit" value="COMENZAR" id="botonComenzar" class="seccion-juego__boton seccion-juego__boton-comenzar" onclick="comenzar();">
+                <button id="botonComenzar" class="seccion-juego__boton seccion-juego__boton-comenzar" onclick="comenzar();">COMENZAR</button>
                 <p id="parrafoIntentos" class="seccion-juego__p2">Cantidad de intentos: 0</p>
             </section>
         </main>
